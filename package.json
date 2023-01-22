@@ -1,0 +1,17 @@
+{
+  "name": "jjba-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^2.2.0",
+    "dotenv": "^16.0.3",
+    "node-schedule": "^2.1.1",
+    "twit": "^2.2.11"
+  }
+}
