@@ -15,7 +15,7 @@ function BotInit() {
   };
   Bot.get("search/tweets", query, BotGotLatestTweet);
 
-  function BotGotLatestTweet(error, data, response) {
+  function BotGotLatestTweet(error, data) {
     if (error) {
       console.log("Não foi possível encontrar os últimos tweets");
     } else {
@@ -23,10 +23,10 @@ function BotInit() {
         id: data.statuses[0].id_str,
       };
     }
-    // Neste método será retweetado o tweet localizado
+
     Bot.post("statuses/retweet/:id", id, BotRetweeted);
 
-    function BotRetweeted(error, response) {
+    function BotRetweeted(error) {
       if (error) {
         console.log("erro" + error);
       } else {
